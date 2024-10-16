@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Input with Compass AI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SkillMatch</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#" class="login">Login/Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="skill-input">
+            <h2>Input Your Skills</h2>
+            <form id="skillForm">
+                <label for="skillName">Skill Name:</label>
+                <input type="text" id="skillName" required>
+
+                <label for="skillDescription">Skill Description:</label>
+                <textarea id="skillDescription" rows="4" required></textarea>
+
+                <button type="submit">Submit Skill</button>
+            </form>
+        </section>
+
+        <aside class="compass-ai">
+            <h2>Compass AI Insights</h2>
+            <div id="aiInsights">
+                <!-- AI insights will be dynamically generated here -->
+                <p>Enter your skills to receive insights and community project suggestions!</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SkillMatch. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
