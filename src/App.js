@@ -1,11 +1,13 @@
 // src/App.js
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router';
 import { ErrorBoundary } from 'react-error-boundary'; // Import ErrorBoundary
 import Home from './pages/Home';
 import About from './pages/About';
 import Features from './pages/Features';
 import Contact from './pages/Contact';
 import ErrorFallback from './pages/NotFound';
+import NotFound from './pages/NotFound'; // Assuming NotFound is in the 'pages' directory
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/features" element={<Features />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
