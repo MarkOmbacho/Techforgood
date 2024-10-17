@@ -1,4 +1,3 @@
-// src/App.js
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { Route, Routes } from 'react-router';
 import { ErrorBoundary } from 'react-error-boundary'; // Import ErrorBoundary
@@ -9,9 +8,14 @@ import Contact from './pages/Contact';
 import Jobs from './pages/skills';
 import ErrorFallback from './pages/NotFound';
 import NotFound from './pages/NotFound'; // Assuming NotFound is in the 'pages' directory
+import FloatingChatIcon from './pages/FloatingChatIcon'; // Import FloatingChatIcon
+import Chatbot from './pages/Chatbot'; // Import Chatbot
 import './App.css'; // Assuming you're using a CSS file for styling
+import { useState } from 'react';
 
 function App() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   return (
     <Router>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
@@ -63,6 +67,10 @@ function App() {
               <p>&copy; 2024 SkillMatch. All rights reserved.</p>
             </footer>
           </div>
+
+          {/* Floating Chat Icon and Chatbot */}
+          <FloatingChatIcon onClick={() => setIsChatOpen(!isChatOpen)} />
+          {isChatOpen && <Chatbot />}
         </div>
       </ErrorBoundary>
     </Router>
