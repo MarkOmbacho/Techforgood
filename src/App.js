@@ -21,16 +21,10 @@ function App() {
             <h2>TechForGood</h2>
             <ul>
               <li><Link to="/" className="sidebar-link">Dashboards</Link></li>
-              <li><Link to="/analytics" className="sidebar-link">Analytics</Link></li>
-              <li><Link to="/crm" className="sidebar-link">CRM</Link></li>
-              <li><Link to="/ecommerce" className="sidebar-link">Ecommerce</Link></li>
-              <li><Link to="/crypto" className="sidebar-link">Crypto</Link></li>
+              <li><Link to="/about" className="sidebar-link">About</Link></li>
+              <li><Link to="/features" className="sidebar-link">Features</Link></li>
               <li><Link to="/projects" className="sidebar-link">Projects</Link></li>
-              <li><Link to="/nft" className="sidebar-link">NFT</Link></li>
               <li><Link to="/job" className="sidebar-link">Job</Link></li>
-              <li><Link to="/apps" className="sidebar-link">Apps</Link></li>
-              <li><Link to="/layouts" className="sidebar-link">Layouts</Link></li>
-              <li><Link to="/auth" className="sidebar-link">Authentication</Link></li>
             </ul>
           </nav>
 
