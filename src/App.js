@@ -27,7 +27,7 @@ function App() {
               <li><Link to="/" className="sidebar-link">Dashboards</Link></li>
               <li><Link to="/about" className="sidebar-link">About</Link></li>
               <li><Link to="/features" className="sidebar-link">Features</Link></li>
-              <li><Link to="/projects" className="sidebar-link">Projects</Link></li>
+              <li><Link to="/skills" className="sidebar-link">Projects</Link></li>
               <li><Link to="/job" className="sidebar-link">Job</Link></li>
             </ul>
           </nav>
