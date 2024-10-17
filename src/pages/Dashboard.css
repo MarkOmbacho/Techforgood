@@ -1,0 +1,108 @@
+/* Dashboard Layout */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #0f1525;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.content {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  gap: 20px;
+}
+
+.notifications, .messages {
+  background-color: #ff3b30;
+  border-radius: 50%;
+  padding: 5px 10px;
+  color: white;
+}
+
+.analytics {
+  display: flex;
+  flex-direction: column;
+}
+
+.upgrade-banner {
+  background-color: #ffe8cc;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.upgrade-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-item {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  margin-bottom: 10px;
+}
+
+.change {
+  font-size: 0.85em;
+}
+
+.increase {
+  color: #28a745;
+}
+
+.decrease {
+  color: #dc3545;
+}
+
+.map {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
