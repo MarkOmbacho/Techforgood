@@ -563,61 +563,101 @@ footer {
 
 .chatbot-container {
   position: fixed;
-  bottom: 80px;
+  bottom: 20px;
   right: 20px;
-  width: 300px;
-  background-color: white;
+  width: 350px;
+  background-color: #f8f9fa;
   border: 1px solid #ccc;
   border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1001;
+  transition: height 0.3s ease;
 }
 
 .chat-header {
-  background-color: #007bff;
+  background-color: #4CAF50;
   color: white;
-  padding: 10px;
+  padding: 12px;
   text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .chat-messages {
-  max-height: 200px;
-  overflow-y: auto;
+  flex: 1;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  overflow-y: auto;
+  max-height: 300px;
+  transition: max-height 0.3s ease;
+  scrollbar-width: thin; /* For Firefox */
+
 }
 
 .chat-message {
   margin-bottom: 10px;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  word-wrap: break-word;
 }
 
 .chat-message.user {
   text-align: right;
+  color: #007bff;
 }
 
 .chat-message.bot {
   text-align: left;
+  color: #343a40;
+  list-style-type: disc; /* Set list style to bullets */
+  padding-left: 20px; /* Indent list items */
 }
 
 .chat-input {
   display: flex;
   padding: 10px;
+  border-top: 1px solid #ccc;
+  background-color: white;
 }
 
 .chat-input input {
   flex: 1;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  outline: none;
 }
 
 .chat-input button {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   margin-left: 10px;
+  transition: background-color 0.3s ease;
 }
+
+.chat-input button:hover {
+  background-color: #0056b3;
+}
+
+/* Smooth scroll effect */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+/* Hover effect for scrollbar */
+.chat-messages:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
