@@ -6,37 +6,64 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Features from './pages/Features';
 import Contact from './pages/Contact';
+import Jobs from './pages/skills';
 import ErrorFallback from './pages/NotFound';
 import NotFound from './pages/NotFound'; // Assuming NotFound is in the 'pages' directory
+import './App.css'; // Assuming you're using a CSS file for styling
 
 function App() {
   return (
     <Router>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <header>
-          <div className="logo">SkillMatch</div>
-          <nav>
+        <div className="app-layout">
+          {/* Sidebar */}
+          <nav className="sidebar">
+            <h2>TechForGood</h2>
             <ul>
-              <li><Link to="/" className="nav-link">Home</Link></li>
-              <li><Link to="/about" className="nav-link">About</Link></li>
-              <li><Link to="/features" className="nav-link">Features</Link></li>
-              <li><Link to="/contact" className="nav-link">Support</Link></li>
-              <li><Link to="/login" className="login">Login/Sign Up</Link></li>
+              <li><Link to="/" className="sidebar-link">Dashboards</Link></li>
+              <li><Link to="/analytics" className="sidebar-link">Analytics</Link></li>
+              <li><Link to="/crm" className="sidebar-link">CRM</Link></li>
+              <li><Link to="/ecommerce" className="sidebar-link">Ecommerce</Link></li>
+              <li><Link to="/crypto" className="sidebar-link">Crypto</Link></li>
+              <li><Link to="/projects" className="sidebar-link">Projects</Link></li>
+              <li><Link to="/nft" className="sidebar-link">NFT</Link></li>
+              <li><Link to="/job" className="sidebar-link">Job</Link></li>
+              <li><Link to="/apps" className="sidebar-link">Apps</Link></li>
+              <li><Link to="/layouts" className="sidebar-link">Layouts</Link></li>
+              <li><Link to="/auth" className="sidebar-link">Authentication</Link></li>
             </ul>
           </nav>
-        </header>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/features" element={<Features />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+          {/* Main Content */}
+          <div className="main-content">
+            <header>
+              <div className="logo">TechForGood</div>
+              <nav>
+                <ul>
+                  <li><Link to="/" className="nav-link">Home</Link></li>
+                  <li><Link to="/about" className="nav-link">About</Link></li>
+                  <li><Link to="/features" className="nav-link">Features</Link></li>
+                  <li><Link to="/skills" className="nav-link">Projects</Link></li>
+                  <li><Link to="/contact" className="nav-link">Support</Link></li>
+                  <li><Link to="/login" className="login">Login/Sign Up</Link></li>
+                </ul>
+              </nav>
+            </header>
 
-        <footer>
-          <p>&copy; 2024 SkillMatch. All rights reserved.</p>
-        </footer>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/features" element={<Features />} />
+              <Route path="/skills" element={<Jobs />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+
+            <footer>
+              <p>&copy; 2024 SkillMatch. All rights reserved.</p>
+            </footer>
+          </div>
+        </div>
       </ErrorBoundary>
     </Router>
   );
