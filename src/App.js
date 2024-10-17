@@ -43,7 +43,7 @@ function App() {
                   <li><Link to="/features" className="nav-link">Features</Link></li>
                   <li><Link to="/skills" className="nav-link">Projects</Link></li>
                   <li><Link to="/contact" className="nav-link">Support</Link></li>
-                  <li><Link to="/login" className="login">Login/Sign Up</Link></li>
+                  <li><Link to="" className="login">Login/Sign Up</Link></li>
                 </ul>
               </nav>
             </header>
