@@ -19,4 +19,10 @@ To run the project locally, follow these steps:
 
 1. Clone the repo: 
    ```bash
-   git clone https://github.com/<your-github-username>/TechForGood.git
+   git clone https://github.com/MarkOmbacho/Techforgood.git
+
+2. Running the project:
+   ```bash
+   npm start
+
+   This will open port 3000 on your local server
